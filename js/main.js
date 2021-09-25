@@ -1,19 +1,3 @@
-var searchEl = document.querySelector(".search");
-var searchInputEl = searchEl.querySelector("input");
-searchEl.addEventListener("click",function(){
-    searchInputEl.focus();
-});
-
-searchInputEl.addEventListener("focus",function(){
-    searchEl.classList.add("focused");
-    searchInputEl.setAttribute("placeholder","통합검색");
-});
-searchInputEl.addEventListener("blur",function(){
-    searchEl.classList.remove("focused");
-    searchInputEl.setAttribute("placeholder","");
-});
-
-
 var badgeEl = document.querySelector("header .badges");
 var toTopEl = document.querySelector("#to-top");
 window.addEventListener("scroll", _.throttle(function(){
@@ -142,7 +126,3 @@ spyEls.forEach(function(spyEl){
         .setClassToggle(spyEl, "show")
         .addTo(new ScrollMagic.Controller( ));
 });
-
-
-var thisYear = document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear(); //2021
